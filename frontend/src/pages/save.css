@@ -1,0 +1,233 @@
+/* Centralizar o container */
+.container-product-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Configurar o layout para exibição lado a lado */
+.product-content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 900px;
+  gap: 20px;
+}
+
+/* Atributos do produto */
+.products-attributes {
+  margin-top: 1rem;
+}
+
+.attributes {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 colunas */
+}
+
+.products-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaço entre os grupos de atributos */
+  align-items: center;
+  width: 100%;
+}
+
+.attribute-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Imagem do produto */
+.product-image-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Detalhes do produto */
+.product-details {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price span {
+  margin-top: 0.5rem;
+  display: block; /* Faz o span ir para a linha de baixo */
+  margin-top: 4px; /* Adiciona um pequeno espaçamento entre o texto e o valor */
+  font-size: 1.2em; /* Opcional: aumenta um pouco o tamanho do preço */
+}
+
+.product-price{
+  margin-top: 0.5rem
+}
+
+
+.product-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Atributos do produto */
+.attribute-group {
+  display: flex;
+  flex-direction: column; /* Coloca os elementos um abaixo do outro */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  margin-top: 0.5rem;
+}
+
+.attribute-title {
+  margin-bottom: 4px; /* Reduz o espaço entre o título e os botões */
+}
+
+.attribute-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Mantém os botões alinhados corretamente */
+  gap: 1rem; /* Dá um espaçamento entre os botões */
+}
+
+.attribute-button {
+  padding: 8px 15px;
+  border: 1px solid #333;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.attribute-button.selected {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Botão de adicionar ao carrinho */
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #218838;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .product-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+  .product-details {
+    text-align: left;
+  }
+  .attribute-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.attribute-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.attribute-button {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 4px;
+}
+
+.attribute-button:hover {
+  border-color: #007bff;
+}
+
+.attribute-button.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.attribute-item {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.no-attributes {
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-section, .right-section {
+    max-width: 100%;
+  }
+}
+
